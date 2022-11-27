@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Main</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="main.js"></script>
+    <script src="gamepad.js"></script>
+    <script src="audio.js"></script>
+  </head>
+  <body>
+    <main id="game">
+      <noscript>
+        <p>You will need to enable JavaScript to play this game.</p>
+      </noscript>
+    </main>
+    <script>
+      const mountElm = () => {
+        const node = document.getElementById("game");
+        const app = Elm.Main.init({node});
+        manageGamePads(app);
+        manageAudio(app);
+      }
+      mountElm();
+    </script>
+  </body>
+</html>
