@@ -6,8 +6,6 @@
     <title>Main</title>
     <link rel=stylesheet href=index.css />
     <script src=main.js></script>
-    <script src=audio.js></script>
-    <script src=gamepad.js></script>
   </head>
   <body>
     <main id=game>
@@ -16,25 +14,21 @@
       </noscript>
       <button id=loadgamebtn tabindex=1>Load Game</button>
     </main>
-    <audio src="assets/bgm.mp3" loop></audio>
     <script>
       const mountElm = () => {
         const node = document.getElementById("game");
         const flags = {
           width: document.body.clientWidth,
           height: document.body.clientHeight,
-          currentTick: Date.now() / 1000
         };
 				const app = Elm.Main.init({ node, flags });
-        manageAudio(app);
-        manageGamePads(app);
       };
 
       loadGameBtn = document.getElementById("loadgamebtn");
       loadGameBtn.style.display = "block";
-      loadGameBtn.addEventListener("click", function(e) {
+      //loadGameBtn.addEventListener("click", function(e) {
         mountElm();
-      });
+      //});
       loadGameBtn.focus();
     </script>
   </body>
