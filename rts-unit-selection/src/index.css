@@ -1,0 +1,38 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#loadappbtn {
+  display: none;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+.tank {
+  position: absolute;
+	background-image: url("assets/tank.png");
+	width: 64px;
+	height: 64px;
+	background-position: 0 -1080px;
+}
+
+#selection-box {
+  box-shadow: blue 0 0 1px, blue 0 0 5px inset;
+  background: hsla(240 100% 40% / 0.1)
+}
+
+.tank.highlighted {
+  background-position-y: -64px;
+}
+
+.tank.selected {
+  background-position-y: -128px;
+}
