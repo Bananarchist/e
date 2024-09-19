@@ -1,0 +1,4 @@
+{:main differentiator.core
+ :output-to "out/main.js"
+ :output-dir "out"
+}
